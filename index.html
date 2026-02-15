@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AEROCLAY // Integrated Interface</title>
     <link rel="stylesheet" href="style.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
@@ -27,11 +29,15 @@
                 <h2 class="title">Flight Logistics</h2>
                 <div class="field-stack">
                     <label>ORIGIN AIRPORT</label>
-                    <select id="originAirport" class="clay-inset"></select>
+                    <select id="originAirport" class="clay-inset">
+                        <option value="" disabled selected>Loading airports...</option>
+                    </select>
                 </div>
                 <div class="field-stack">
                     <label>AIRLINE</label>
-                    <select id="airline" class="clay-inset"></select>
+                    <select id="airline" class="clay-inset">
+                        <option value="" disabled selected>Loading airlines...</option>
+                    </select>
                 </div>
                 <div class="field-stack">
                     <label>MONTH</label>
@@ -76,9 +82,11 @@
 
         <footer class="clay-card action-bar glass-effect">
             <button id="predictBtn" class="clay-btn">INITIALIZE PREDICTION</button>
-            <div id="notification" class="notif">NOTIFICATION: HIDDEN</div>
+            <div id="notification" class="notif">STATUS: INITIALIZING...</div>
         </footer>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
