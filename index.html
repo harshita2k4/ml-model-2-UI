@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AEROCLAY // Integrated Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="airplane-bg"></div>
+
+    <div class="viewport-scaler">
+        <header class="clay-card header-unit">
+            <div class="header-main">
+                <div class="brand">
+                    <i class="fas fa-plane-departure"></i> 
+                    <span>AEROCLAY</span> 
+                    <small class="v-tag">v2.5.0</small>
+                </div>
+                <div class="status-pill">FLIGHT INTELLIGENCE</div>
+            </div>
+            <div class="header-strip">AERO-AIRPORTS // DELAY PREDICTION INTERFACE</div>
+        </header>
+
+        <div class="content-wrapper">
+            <aside class="clay-card sidebar glass-effect">
+                <h2 class="title">Flight Logistics</h2>
+                <div class="field-stack">
+                    <label>ORIGIN AIRPORT</label>
+                    <select id="originAirport" class="clay-inset"></select>
+                </div>
+                <div class="field-stack">
+                    <label>AIRLINE</label>
+                    <select id="airline" class="clay-inset"></select>
+                </div>
+                <div class="field-stack">
+                    <label>MONTH</label>
+                    <select id="MONTH" class="clay-inset">
+                        <option value="1">JANUARY</option>
+                        <option value="2">FEBRUARY</option>
+                        <option value="3">MARCH</option>
+                        <option value="4">APRIL</option>
+                        <option value="5">MAY</option>
+                        <option value="6">JUNE</option>
+                        <option value="7">JULY</option>
+                        <option value="8">AUGUST</option>
+                        <option value="9">SEPTEMBER</option>
+                        <option value="10">OCTOBER</option>
+                        <option value="11">NOVEMBER</option>
+                        <option value="12" selected>DECEMBER</option>
+                    </select>
+                </div>
+            </aside>
+
+            <main class="clay-card main-panel glass-effect">
+                <h2 class="title">Operational Parameters <small>(Top 10 Features)</small></h2>
+                <div class="bento-grid">
+                    <div class="grid-row">
+                        <div class="cell"><label>TAXI_OUT</label><input type="number" class="clay-inset dark" value="15"></div>
+                        <div class="cell"><label>ELAPSED_TIME</label><input type="number" class="clay-inset dark" value="120"></div>
+                        <div class="cell"><label>INPUT</label><input type="number" class="clay-inset pink" value="5"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="cell"><label>TAXI_IN</label><input type="text" class="clay-inset pink" value="TAXI_IN"></div>
+                        <div class="cell"><label>SCHED_DEPART</label><input type="time" class="clay-inset pink" value="08:00"></div>
+                        <div class="cell"><label>DEPART_TIME</label><input type="time" class="clay-inset pink" value="08:15"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="cell"><label>WHEELS_OFF</label><input type="time" class="clay-inset dark" value="10:00"></div>
+                        <div class="cell"><label>WHEELS_ON</label><input type="time" class="clay-inset pink" value="10:00"></div>
+                        <div class="cell"><label>ARRIV_TIME</label><input type="time" class="clay-inset dark" value="10:30"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <footer class="clay-card action-bar glass-effect">
+            <button id="predictBtn" class="clay-btn">INITIALIZE PREDICTION</button>
+            <div id="notification" class="notif">NOTIFICATION: HIDDEN</div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
